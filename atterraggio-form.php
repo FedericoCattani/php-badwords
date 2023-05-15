@@ -1,11 +1,8 @@
 <?php
 
-//var_dump($_GET);
-
-
-$name = $_GET['name'];
-$lastname = $_GET['lastname'];
-$email = $_GET['email'];
+$frase = $_GET['frase'];
+$parola = $_GET['parola'];
+$testoCensurato = str_replace($frase, 'xxx', $parola);
 
 ?>
 
@@ -16,16 +13,17 @@ $email = $_GET['email'];
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style-form.css">
+
   <title>Pagina atterraggio form</title>
 </head>
 
 <body>
-
-  <h1>Utente:</h1>
+  <h1>Frase e parola censurata:</h1>
   <ul>
-    <li>Nome: <?php echo $name ?></li>
-    <li>Cognome: <?php echo $lastname ?></li>
-    <li>Email: <?php echo $email ?></li>
+    <li><?php echo $frase ?></li>
+    <li><?php echo $testoCensurato ?></li>
   </ul>
 
 </body>
